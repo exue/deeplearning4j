@@ -32,9 +32,9 @@ import java.util.*;
 /**
  * An ND4j backend.
  *
- * A "backend" is also described here: http://nd4j.org/backend.html
+ * A "backend" is also described here: https://deeplearning4j.org/docs/latest/deeplearning4j-config-gpu-cpu
  *
- * A backend also has 2  variables to be aware of.
+ * A backend also has 2 variables to be aware of.
  * 1 is the environment variable, ND4J_DYNAMIC_LOAD_CLASSPATH
  * This will define a uri path separated by ; where jars will be
  * loaded from the path and dynamically loaded.
@@ -210,8 +210,8 @@ public abstract class Nd4jBackend {
         }
 
         else
-            throw new NoAvailableBackendException(
-                            "Please ensure that you have an nd4j backend on your classpath. Please see: http://nd4j.org/getstarted.html");
+            throw new NoAvailableBackendException("Please ensure that you have an nd4j backend on your classpath."
+                    + " Please see: https://deeplearning4j.org/docs/latest/deeplearning4j-config-gpu-cpu");
 
         triedDynamicLoad = true;
         //load all the discoverable uris and try to load the backend again
